@@ -1,7 +1,5 @@
-[workspace]
-
 [package]
-name = "xui"
+name = "xui-dom"
 version = "0.0.0"
 authors = ["강동윤 <kdy1997.dev@gmail.com>"]
 license = "Apache-2.0"
@@ -11,11 +9,7 @@ edition = "2018"
 keywords = ["xui", "gui", "ui"]
 autotests = true
 autoexamples = true
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-xui-core = { path = "./core" }
-xui-dom = { path = "./dom" }
-
-webrender_api = "0.61.0"
-webrender = "0.61.0"
