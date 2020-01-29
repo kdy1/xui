@@ -15,3 +15,12 @@ xui-css = { path = "./css" }
 xui-dom = { path = "./dom" }
 stretch = "0.3.2"
 webrender = "0.61.0"
+
+[dev-dependencies]
+app_units = "0.7"
+env_logger = "0.5"
+euclid = "0.20"
+gleam = "0.6.2"
+glutin = "0.21"
+rayon = "1"
+winit = "0.19.0"
