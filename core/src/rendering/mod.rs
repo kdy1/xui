@@ -60,7 +60,7 @@ pub trait RenderObject {
     /// can change, then, when it does change, the subclass should make sure
     /// to call [markNeedsLayoutForSizedByParentChange].
     fn sized_by_paren(&self) -> bool {
-        sizedByParent
+        false
     }
 
     /// Do the work of computing the layout for this render object.
@@ -72,7 +72,7 @@ pub trait RenderObject {
     ///
     /// If [sizedByParent] is true, then this function should not actually
     /// change the dimensions of this render object. Instead, that work
-    /// should be done by [performResize]. If [sizedByParent] is false, then
+    /// should be done by [perform_resize]. If [sizedByParent] is false, then
     /// this function should both change the dimensions of this render
     /// object and instruct its children to layout.
     ///
@@ -83,6 +83,19 @@ pub trait RenderObject {
     /// the child undergoes layout. Otherwise, the child can change its
     /// layout information without informing this render object.
     fn perform_layout(&self, constraints: &Self::Constraints);
+
+    /// Updates the render objects size using only the constraints.
+    ///
+    /// Do not call this function directly: call [layout] instead. This function
+    /// is called by [layout] when there is actually work to be done by this
+    /// render object during layout. The layout constraints provided by your
+    /// parent are available via the [constraints] getter.
+    ///
+    /// Subclasses that set [sizedByParent] to true should override this method
+    /// to compute their size.
+    ///
+    /// This function is called only if [sizedByParent] is true.
+    fn perform_resize(&mut self, constraints: &Self::Constraints);
 
     /// Whether this render object repaints separately from its parent.
     ///
