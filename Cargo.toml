@@ -1,3 +1,5 @@
+[workspace]
+
 [package]
 name = "xui"
 version = "0.0.0"
@@ -12,5 +14,6 @@ autoexamples = true
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+xui-core = { path = "./core" }
 webrender_api = "0.61.0"
 webrender = "0.61.0"
