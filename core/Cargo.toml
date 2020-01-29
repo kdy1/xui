@@ -13,3 +13,4 @@ keywords = ["xui", "gui", "ui"]
 [dependencies]
 xui-css = { path = "./css" }
 xui-dom = { path = "./dom" }
+stretch = "0.3.2"
