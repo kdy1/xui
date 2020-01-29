@@ -11,3 +11,5 @@ keywords = ["xui", "gui", "ui"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+xui-css = { path = "./css" }
+xui-dom = { path = "./dom" }

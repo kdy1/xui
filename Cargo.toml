@@ -15,8 +15,6 @@ autoexamples = true
 
 [dependencies]
 xui-core = { path = "./core" }
-xui-css = { path = "./css" }
-xui-dom = { path = "./dom" }
 xui-macros = { path = "./macros" }
 xui-widgets = { path = "./widgets" }
 
