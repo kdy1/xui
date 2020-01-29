@@ -1,0 +1,14 @@
+[package]
+name = "xui"
+version = "0.0.0"
+authors = ["강동윤 <kdy1997.dev@gmail.com>"]
+license = "Apache-2.0"
+repository = "https://github.com/kdy1/xui.git"
+description = "Rust everywhere"
+edition = "2018"
+keywords = ["gui", "ui"]
+autotests = true
+autoexamples = true
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
